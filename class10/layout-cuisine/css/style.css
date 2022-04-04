@@ -1,0 +1,143 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header{
+  border: 1px solid black;
+  height: 55px;
+  background-color: aqua;
+}
+
+nav *{
+  float: left;
+}
+
+nav ul{
+  width: 100%;
+  padding-left: 50%;
+}
+
+nav li{
+  width: 12.5%;
+  list-style: none;
+}
+
+main, main ~ section{
+  height: 300px;
+  border: 1px solid black;
+}
+main{
+  padding: 30px 40% 30px 10%;
+  background-color: aqua;
+}
+
+main input, main ul li{
+  float: left;
+  list-style: none;
+}
+
+main  li{
+  width: 10%;
+}
+
+main + section{
+  padding: 30px 20% 30px 40%;
+  background-color: aquamarine;
+}
+
+main + section + section{
+  padding: 30px 5% 30px 5%;
+  text-align: center;
+  background-color: azure;
+}
+
+main + section + section li{
+  width: 20%;
+  float: left;
+  list-style: none;
+
+}
+
+main + section + section ul{
+  padding: 0 10%;
+}
+
+main + section + section section{
+  border: 1px solid black;
+  float: left;
+  height: 100px;
+  background-color: beige;
+  width: 100%;
+
+}
+
+main + section + section section section{
+  width: 25%;
+}
+
+main + section + section section section *{
+  display: block;
+}
+
+main + section + section + section{
+  background-color: blueviolet;
+  text-align: center;
+  padding: 30px 20%;
+  height: 500px;
+}
+
+main + section + section + section > span{
+  width: 50%;
+  float: left;
+}
+
+main + section + section + section video{
+  width: 100%;
+  background-color: aqua;
+}
+
+main + section + section + section + section{
+  background-color: fuchsia;
+}
+
+main + section + section + section + section *{
+  text-align: center;
+  display: block;
+}
+
+main + section + section + section + section img{
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

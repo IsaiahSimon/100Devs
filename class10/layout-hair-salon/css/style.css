@@ -1,0 +1,115 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+nav {
+  height: 60px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+nav img, nav ul li, nav a{
+  float: left;
+}
+
+nav img, nav a{
+  width: 30%;
+}
+
+nav ul li{
+  width: 10%;
+  list-style: none;
+}
+
+nav ul li a{
+  width: 100%;
+  list-style: none;
+}
+
+nav > a{
+  float: right;
+  text-align: right;
+}
+
+main, section {
+  border: 1px solid black;
+  padding: 2%;
+}
+
+main, main ~ section{
+  height: 500px;
+  border: 1px solid black;
+  padding: 8%;
+}
+
+main + section section{
+  float: left;
+  width: 33.3333%;
+  background-color: blanchedalmond;
+
+}
+
+main + section + section section{
+  float: left;
+  width: 50%;
+  height: 300px;
+  background-color: blanchedalmond;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+}
+
+main + section + section + section section{
+  float: left;
+  width: 33.333%;
+  height: 300px;
+  padding: 0 50px;
+}
+
+main + section + section + section + section{
+  height: 200px;
+  background-color: teal;
+}
+main + section + section + section + section *{
+  display: block;
+}
+
+main + section + section + section + section + section{
+  background-color: orangered;
+  height: 700px;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
