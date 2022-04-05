@@ -1,0 +1,122 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.flex-container{
+  /* height: 500px; */
+  /* flex-direction: column; */
+  display: flex;
+  background: #f4f4f4;
+
+  /* Always on the main axis */
+  /* justify-content: space-between; */
+  /* Always on the cross axis */
+  /* align-items: center; */
+
+  /* flex-wrap: wrap; */
+
+}
+
+.item{
+  /* width: 100px; */
+  /* width changed to flex-basis */
+  /* Like starting point for growth/shrink*/
+  /* flex-basis: 300px; */
+  /* all items same size*/
+  /* flex-grow: 1; */
+
+  /* COMBO grow, shrink, basis */
+  /* flex: 1 0 100px; */
+  /* Dont need shrink/basis? */
+  flex: 1;
+
+
+  height: 100px;
+  background: #254de4;
+  margin: 10px;
+  color: white;
+
+  /* Easy way to center a div */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/************ ALIGNMENT *************/
+/* Targets the 1st element with the class "item"
+.item:nth-of-type(1){
+  align-self: start;
+}
+
+/* Targets the 2nd element with the class "item"
+.item:nth-of-type(2){
+  align-self: center;
+}
+
+/* Targets the 3rd element with the class "item"
+.item:nth-of-type(3){
+  align-self: end;
+}
+*/
+
+/************ CHANGING ORDER *************/
+/* .item:nth-of-type(1) {
+  order:2
+}
+
+.item:nth-of-type(2) {
+  order:1
+}
+
+.item:nth-of-type(3) {
+  order:3
+} */
+
+/************ flex-basis, grow, shrink *************/
+.item:nth-of-type(1) {
+  /* flex-grow: 1; */
+  /* flex-shrink: 1; */
+
+}
+
+.item:nth-of-type(2) {
+  /* flex-basis: 200px; */
+  /* flex-grow: 2; */
+  /* flex-shrink: 2; */
+}
+
+.item:nth-of-type(3) {
+  /* flex-grow: 1; */
+  /* flex-shrink: 3; */
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

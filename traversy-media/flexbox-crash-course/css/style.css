@@ -1,0 +1,156 @@
+/* import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Reset */
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: #a1c3ff;
+}
+
+img{
+  max-width: 100%;
+}
+
+h1, h2{
+  margin-bottom: 15px;
+}
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+ul{
+  list-style-type: none;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+/* navbar styling */
+.navbar{
+  background: #3474e6;
+  color: white;
+  height: 60px;
+}
+
+/* Flexbox logo */
+.navbar .logo{
+  font-size: x-large;
+  font-weight: bold;
+}
+
+/* navigation links */
+.navbar a{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* add hover color to navbar links */
+.navbar a:hover{
+  color: lightblue;
+}
+
+/* make flex container and adjust nav spacing*/
+.navbar .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+/* make navbar links list horizontal*/
+.navbar ul{
+  display: flex;
+}
+
+/* space out li elements within ul */
+.navbar ul li{
+  margin-left: 20px;
+}
+
+/********** Header section now ********/
+
+/* basic styling */
+.header{
+  background-color: #0151cc;
+  color: white;
+  min-height: 400px;
+}
+
+.header h1{
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.header img{
+  max-width: 400px;
+}
+
+/* add flex container */
+.header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/********** Boxes section now ********/
+/* make flex container */
+.boxes .container{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* make boxes the same size and style*/
+.box{
+  flex: 1;
+  background: #0a51cc;
+  color: white;
+  border-radius: 10px;
+  margin: 20px 10px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.6);
+  padding: 15px 20px;
+}
+
+/* space icons away from text */
+.box i{
+  margin-right: 10px;
+}
+
+/********** make responsive now ********/
+/* Skip: hamburger menu requires JS */
+
+/* under 768px */
+@media(max-width: 768px){
+  .header .container{
+    /* method 1 to stack elements */
+    flex-direction: column;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .boxes .container{
+    /* method 2 to stack elements */
+    display: block;
+    text-align: center;
+  }
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
