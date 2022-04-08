@@ -5,14 +5,15 @@ document.querySelector('#check').addEventListener('click', check)
 function check() {
 
   // gets the value out of the input
-  const day = document.querySelector('#day').value
+  const day = document.querySelector('#day').value.toLowerCase()
+
 
   //Conditionals go here
 
-  if (day === 'Saturday' || day === 'Sunday'){
+  if (day === 'saturday' || day === 'sunday'){
     // console.log("It's the weekend!");
     document.getElementById("placeToSee").innerHTML = "It's the weekend!";
-  }else if (day === 'Tuesday' || day === 'Thursday'){
+  }else if (day === 'tuesday' || day === 'thursday'){
     // console.log("It's a class day!");
     document.getElementById("placeToSee").innerHTML = "It's a class day!";
   }else{
