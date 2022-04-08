@@ -5,6 +5,10 @@ document.querySelector('#dominosPizza').addEventListener('click', jumanji)
 document.querySelector('#zebra').addEventListener('click', add9)
 document.querySelector('#cantThinkOfAnything').addEventListener('click', sub2)
 
+// add fifth smurf (event listener)
+document.querySelector('#theFifthElement').addEventListener('click', five)
+
+
 function makeZero() {
   total = 0
   document.querySelector('#placeToPutResult').innerText = total
@@ -22,5 +26,11 @@ function add9() {
 
 function sub2() {
   total = total - 2
+  document.querySelector('#placeToPutResult').innerHTML = total
+}
+
+// instructions for five smurf
+function five() {
+  total = total / 3
   document.querySelector('#placeToPutResult').innerHTML = total
 }
