@@ -19,7 +19,7 @@ function claireNext(){
 }
 
 function sharleenNext(){
-	claire.classList.add('hidden')
 	andi.classList.add('hidden')
+	claire.classList.add('hidden')
 	sharleen.classList.toggle('hidden')
 }
