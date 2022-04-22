@@ -11,6 +11,15 @@ function getDrink(){
       document.querySelector('h2').innerText = data.drinks[0].strDrink
       document.querySelector('img').src = data.drinks[0].strDrinkThumb
       document.querySelector('h3').innerText = data.drinks[0].strInstructions
+
+      // Build a list of related drinks
+      for (const drink in data.drinks) {
+        let li = document.createElement('li')
+        let ol = document.querySelector('ol')
+
+        ol.appendChild(li).innerText = data.drinks[drink].strDrink
+      }
+
     })
     .catch(err => {
         console.log(`error ${err}`)
@@ -18,3 +27,16 @@ function getDrink(){
 
 }
 
+// Remove all li elements on next click
+document.querySelector('button').addEventListener('click', clearAllDrinks)
+
+function clearAllDrinks() {
+  let ol = document.querySelector('ol')
+
+  function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.lastChild);
+    }
+  }
+  removeAllChildNodes(ol);
+}
