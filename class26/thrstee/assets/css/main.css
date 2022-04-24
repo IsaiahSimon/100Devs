@@ -92,6 +92,7 @@ input, select, textarea {
 
 	html {
 		box-sizing: border-box;
+    font-size: 62.5%;
 	}
 
 	*, *:before, *:after {
@@ -3331,4 +3332,48 @@ input, select, textarea {
 /* Additional Styles */
 body{
   background: black;
+}
+
+/* header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} */
+
+header h1{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 3%;
+}
+
+.header.input{
+  text-align: center;
+  width: 40%;
+}
+
+#btn-main{
+  width: 30%;
+  font-size: 1.5rem;
+}
+
+
+.hidden{
+  display: none;
+}
+
+#header{
+  padding-top: 3em;
+}
+
+#p-main{
+  margin: 0;
+  font-size: 2rem;
+  width: 60%;
+  text-align: center;
+  letter-spacing: normal;
 }

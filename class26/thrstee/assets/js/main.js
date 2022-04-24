@@ -210,23 +210,7 @@ function getDrink(){
         let drinkInstructions = articleArr[i].querySelector('p');
         drinkInstructions.innerHTML = data.drinks[i].strInstructions;
       }
-      // document.querySelector('h2').innerText = data.drinks[0].strDrink
-      // document.querySelector('img').src = data.drinks[0].strDrinkThumb
-      // document.querySelector('h3').innerText = data.drinks[0].strInstructions
-
-      // Build a list of related drinks
-
-
-      // for (const drink in data.drinks) {
-      //   let li = document.createElement('li');
-      //   let ol = document.querySelector('ol');
-      //   let img = document.createElement("img");
-
-      //   // ol.appendChild(li).innerText = data.drinks[drink].strDrink;
-      //   // img.setAttribute('src', data.drinks[drink].strDrinkThumb);
-      //   // ol.appendChild(li).appendChild(img);
-      // }
-
+    
     })
     .catch(err => {
         console.log(`error ${err}`)
