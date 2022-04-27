@@ -210,7 +210,25 @@ function getDrink(){
         let drinkInstructions = articleArr[i].querySelector('p');
         drinkInstructions.innerHTML = data.drinks[i].strInstructions;
       }
-    
+
+      // generate new tile
+      let article = document.createElement('article');
+      let span = document.createElement('span');
+      let img = document.createElement('img');
+      let a = document.createElement('a');
+      let h2 = document.createElement('h2');
+      let div = document.createElement('div');
+      let p = document.createElement('p');
+
+      let artSpan = document.createElement(article).appendChild(span).appendChild(img)
+      let artSpanAnchor = artSpan.appendChild(a).appendChild(h2)
+      let anchor = artSpanAnchor.appendChild(div).appendChild(p)
+
+      
+
+
+      // article(span(img),a(h2,div(p)))
+
     })
     .catch(err => {
         console.log(`error ${err}`)
