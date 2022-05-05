@@ -20,7 +20,7 @@ class Dog extends Animal{
     speak(){
         super.speak()
         console.log(`${this.name} barks`)
-    }    
+    }
 }
 class Cat extends Animal{
     constructor(name,breed){
@@ -33,7 +33,7 @@ class Cat extends Animal{
     speak(){
         super.speak()
         console.log(`${this.name} meows`)
-    }    
+    }
 }
 
 let simba = new Dog('Simba','Shepard')
