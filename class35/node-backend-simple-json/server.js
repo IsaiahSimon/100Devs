@@ -33,23 +33,18 @@ const server = http.createServer((req, res) => { // must create server 1st
       break;
 
     case '/api':
-      let personName = 'unknown';
-      let personStatus = 'unknown';
-      let personOccupation = 'unknown';
-
-      if(params['student']== 'leon'){
-        personName = 'leon';
-        personStatus = 'Boss Man';
-        personOccupation = 'Baller';
+      let flipResult = "type 'flip' in the input box";
+      if (params['student'] == 'flip') {
+        flipResult = Math.random() <= .5 ? "heads" : "tails";
       }
-      res.writeHead(200, {'Content-Type': 'application/json'});
-        const objToJson = {
-          name: personName,
-          status: personStatus,
-          currentOccupation: personOccupation
-        }
-        res.end(JSON.stringify(objToJson));
-        break;
+
+      res.writeHead(200, {'Content-Type' : 'application/json'});
+      const objTOJson = {
+        name: flipResult
+      }
+      res.end(JSON.stringify(objTOJson));
+      break;
+
       case '/css/style.css':
         fs.readFile('css/style.css', function(err, data) {
           res.write(data);
