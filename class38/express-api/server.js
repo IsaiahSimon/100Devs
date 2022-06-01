@@ -9,7 +9,7 @@ let rappers = {
     '21 savage': {
         'age': 28,
         'birthName': 'Shéyaa Bin Abraham-Joseph',
-        'birthdate': '22 October 1992', 
+        'birthdate': '22 October 1992',
         'birthLocation': 'London, England',
         'origin': 'Atlanta, Georgia',
         'genre': 'hip hop, trap, rap, horrorcore',
@@ -21,7 +21,7 @@ let rappers = {
     'chance the rapper':{
         'age': 28,
         'birthName': 'Chancelor Jonathan Bennett',
-        'birthdate': 'April 16, 1993', 
+        'birthdate': 'April 16, 1993',
         'birthLocation': 'London, England',
         'origin': 'Chicago, Illinois',
         'genre': 'hip hop, alternative hip hop, r & b',
@@ -33,7 +33,7 @@ let rappers = {
     'unknown':{
         'age': 'unknown',
         'birthName': 'unknown',
-        'birthdate': 'unknown', 
+        'birthdate': 'unknown',
         'birthLocation': 'unknown',
         'origin': 'unknown',
         'genre': 'unknown',
@@ -43,6 +43,7 @@ let rappers = {
         'children': 'unknown'
     }
 }
+
 
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
