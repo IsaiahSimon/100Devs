@@ -1,43 +1,41 @@
-const { response } = require('express');
-const express = require('express');
-const app = express();
-const PORT = process.env.PORT || 3000;
+const express = require('express')
+const app = express()
+const cors = require('cors')
+const PORT = 8000
+
+app.use(cors())
 
 const rappers = {
-  '21 savage': {
-    'age': 29,
-    'birthName': 'Shéyaa Bin Abraham-Joseph',
-    'birthPlace': 'London, England'
-  },
-  'chance the rapper': {
-    'age': 29,
-    'birthName': 'Chancelor Bennett',
-    'birthPlace': 'Chicago, Illinois'
-  },
-  'dylan': {
-    'age': 29,
-    'birthName': 'Dylan',
-    'birthPlace': 'Dylan'
-  }
+    '21 savage':{
+        'age': 29,
+        'birthName':'Shéyaa Bin Abraham-Joseph',
+        'birthLocation': 'London, England' 
+    },
+    'chance the rapper':{
+        'age': 29,
+        'birthName':'Chancelor Bennett',
+        'birthLocation': 'Chicago, Illinois' 
+    },
+    'dylan':{
+        'age': 29,
+        'birthName':'Dylan',
+        'birthLocation': 'Dylan' 
+    }
 }
 
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
-});
+app.get('/', (request, response)=>{
+    response.sendFile(__dirname + '/index.html')
+})
 
-app.get('/api/:rapperName', (req, res) => {
-  const rapperName = req.params.rapperName.toLowerCase();           // look at query parameters
-  console.log(rapperName);
-  if (rappers[rapperName]) {
-    res.json(rappers[rapperName]);
-  } else {
-    res.json(rappers['dylan']);
-  }
+app.get('/api/:rapperName', (request,response)=>{
+    const rappersName = request.params.rapperName.toLowerCase()
+    if(rappers[rappersName]){
+        response.json(rappers[rappersName])
+    }else{
+        response.json(rappers['dylan'])
+    }
+})
 
-  //res.json(rappers);
-});
-
-
-app.listen(process.env.PORT || PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
-});
+app.listen(process.env.PORT || PORT, ()=>{
+    console.log(`The server is running on port ${PORT}! You better go catch it!`)
+})
